@@ -5,17 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    /**
+     * @var User
+     */
+    public $user;
+
     public function __construct(User $user)
     {
         $this->user = $user;
     }
 
-    private function checkPassword($data) {
+    private function checkPassword($data)
+    {
         if ($data['password']) {
             $data['password'] = Hash::make($data['password']);
         } else {
