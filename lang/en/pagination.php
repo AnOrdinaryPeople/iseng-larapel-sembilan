@@ -21,14 +21,14 @@ return [
     'delete' => 'Delete',
     'verify' => 'Verify',
     'column' => [
-      'no' => 'No',
-      'name' => 'Name',
-      'email' => 'Email',
-      'verified' => 'Verified',
-      'action' => 'Action',
+        'no' => 'No',
+        'name' => 'Name',
+        'email' => 'Email',
+        'verified' => 'Verified',
+        'action' => 'Action',
     ],
     'error' => [
-      'not_found' => 'Data not found',
+        'not_found' => 'Data not found',
     ],
 
 ];

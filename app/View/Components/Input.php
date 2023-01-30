@@ -10,7 +10,7 @@ class Input extends Component
      * ```blade
      * <label>{{ $label }}</label>
      * ```
-     * 
+     *
      * @var string
      */
     public $label;
@@ -19,7 +19,7 @@ class Input extends Component
      * ```blade
      *  @if($required) <span class="text-danger">*</span> @endif
      * ```
-     * 
+     *
      * @var bool
      */
     public $required;
@@ -28,7 +28,7 @@ class Input extends Component
      * ```blade
      * <input type="{{ $type }}" />
      * ```
-     * 
+     *
      * @var string
      */
     public $type;
@@ -37,7 +37,7 @@ class Input extends Component
      * ```blade
      * <input class="@error($name) is-invalid @enderror" name="{{ $name }}" />
      * ```
-     * 
+     *
      * @var string
      */
     public $name;
@@ -46,7 +46,7 @@ class Input extends Component
      * ```blade
      * <input value="{{ $value }}" />
      * ```
-     * 
+     *
      * @var string
      */
     public $value;
@@ -55,7 +55,7 @@ class Input extends Component
      * ```blade
      * <input @if($disabled) disabled @endif />
      * ```
-     * 
+     *
      * @var bool
      */
     public $disabled;
