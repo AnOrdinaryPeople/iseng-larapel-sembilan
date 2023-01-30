@@ -33,9 +33,9 @@
                 >@lang('pagination.delete')</button>
                 @if(!$user->email_verified_at)
                 <form class="d-inline" method="POST" action="{{ route('users.verify', $user->id) }}">
-                @csrf
-                @method('PUT')
-                <button type="submit" class="btn btn-warning">@lang('pagination.verify')</button>
+                    @csrf
+                    @method('PUT')
+                    <button type="submit" class="btn btn-warning">@lang('pagination.verify')</button>
                 </form>
                 @endif
             </td>
@@ -53,31 +53,31 @@
 
 @section('modal')
 <div id="user-delete-confirm" class="modal fade" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">@lang('modal.confirmation')</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<p>@lang('modal.email_desc')</p>
-</div>
-<form class="modal-footer" method="POST" action="/">
-@csrf
-@method('DELETE')
-<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('modal.no')</button>
-<button type="submit" class="btn btn-danger">@lang('modal.yes')</button>
-</form>
-</div>
-</div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@lang('modal.confirmation')</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>@lang('modal.email_desc')</p>
+            </div>
+            <form class="modal-footer" method="POST" action="/">
+                @csrf
+                @method('DELETE')
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('modal.no')</button>
+                <button type="submit" class="btn btn-danger">@lang('modal.yes')</button>
+            </form>
+        </div>
+    </div>
 </div>
 @endsection
 
 @section('script')
 <div
-id="users-parser"
-data-bs-msg="@lang('modal.email_desc')"
-data-bs-url="{{ route('users.destroy', ':id') }}"
+    id="users-parser"
+    data-bs-msg="@lang('modal.email_desc')"
+    data-bs-url="{{ route('users.destroy', ':id') }}"
 ></div>
 @vite('resources/js/user/index.js')
 @endsection
