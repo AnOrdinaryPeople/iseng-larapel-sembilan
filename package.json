@@ -2,16 +2,25 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "lint:js": "eslint --ext \".ts\" --ignore-path .gitignore .",
+        "lint": "yarn lint:js",
+        "lintfix": "yarn lint:js --fix"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
+        "@types/bootstrap": "^5.2.6",
+        "@typescript-eslint/eslint-plugin": "^5.51.0",
+        "@typescript-eslint/parser": "^5.51.0",
         "axios": "^1.1.2",
         "bootstrap": "^5.2.3",
+        "eslint": "^8.33.0",
         "laravel-vite-plugin": "^0.7.2",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "sass": "^1.56.1",
+        "ts-loader": "^9.4.2",
+        "typescript": "^4.9.5",
         "vite": "^4.0.0"
     },
     "dependencies": {

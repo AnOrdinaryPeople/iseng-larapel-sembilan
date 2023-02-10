@@ -79,5 +79,5 @@
     data-bs-msg="@lang('modal.email_desc')"
     data-bs-url="{{ route('users.destroy', ':id') }}"
 ></div>
-@vite('resources/js/user/index.js')
+@vite('resources/js/user/index.ts')
 @endsection

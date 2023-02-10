@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name') }} - @yield('title', config('app.env'))</title>
 
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        @vite(['resources/sass/app.scss', 'resources/js/app.ts'])
     </head>
     <body>
         <div class="container-fluid">
